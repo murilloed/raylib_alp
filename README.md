@@ -48,8 +48,11 @@ uma nova mecânica
 A ideia é:
 
 entender → praticar → modificar → evoluir
-🗂️ Estrutura do Repositório
-📁 projeto/
+
+# 🗂️ Estrutura do Repositório
+
+```text
+projeto/
 │
 ├── main.c
 ├── main.exe
@@ -74,7 +77,10 @@ entender → praticar → modificar → evoluir
 ├── raylib_audio_sound_effects_explicado7.md
 │
 ├── outputs/
+│
 └── Exemplo_completo4/
+```
+
 🚀 Sequência de Aprendizado
 
 ✅ Etapa 1 — Código Básico
