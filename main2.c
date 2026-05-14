@@ -14,7 +14,9 @@ int main(void)
         ClearBackground(RAYWHITE);
         DrawText("Bem-Vindo ao Raylib", 170, 170, 40, BLUE);
         DrawText("Pressione ESC para sair", 240, 250, 24, DARKGRAY);
-
+        DrawRectangle(0,0,50,50,RED);
+        DrawRectangle(0,80,50,150,GREEN)
+        DrawRectangle(60,0,50,50,YELLOW);
         EndDrawing();
     }
 
