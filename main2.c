@@ -1,8 +1,10 @@
+//atividade2
+
 #include "raylib.h"
 
 int main()
 {
-    InitWindow(800, 600, "Meu Primeiro Game");
+    InitWindow(800, 450, "basic window");
 
     while (!WindowShouldClose())
     {
@@ -10,8 +12,9 @@ int main()
 
         ClearBackground(RAYWHITE);
 
-        DrawText("Bem-vindo ao raylib", 10, 10, 40, BLUE);
-
+        DrawRectangle(10, 10, 100, 100, RED);
+        DrawRectangle(400, 100, 300, 100, GREEN);
+        DrawRectangle(200, 200, 100, 100, YELLOW);
         EndDrawing();
     }
 
