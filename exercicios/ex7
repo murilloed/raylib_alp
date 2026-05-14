@@ -1,0 +1,65 @@
+#include "raylib.h"
+
+int main()
+{    
+
+    Vector2 = mousePos = GetMousePosition()
+    Music musica;
+    Sound tiro;
+    Sound acerto;
+    
+    2DTexture inimigo;
+    float inimigoPosX = 0;
+    int pontos = 0;
+    InitWindow(800,400,"ATIRADOR");
+    
+    initSoundDevice();
+
+    musica = LoadSound("tiro.mp3");
+    acerto = LoadSound("acerto.mp3");
+    musica = LoadMusicStream("fundo.ogg");
+
+    
+    PlayMusicStream(musica);
+    while (!WindowShouldClose())
+    {
+       inimigoPosX += GetFrameTime() * 100
+       if(inimigoPosX > 800){
+         inimigoPosX = 0;
+       }
+        Rectangle areaInimigo = {inimigoX, 100, inimigo.width, inimigo.height};
+
+        if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+        {
+            PlaySound(tiro);
+
+            if (CheckCollisionPointRec(mousePos, areaInimigo))
+            {
+                PlaySound(acerto);
+                pontos++;
+                inimigoX = -inimigo.width;
+            }
+        }
+
+        BeginDrawing();
+
+        ClearBackground(RAYWHITE);
+
+        DrawTexture(inimigo, inimigoX, 100, WHITE);
+
+        DrawText(TextFormat("Pontos: %d", pontos), 10, 10, 30, BLACK);
+        DrawText("Clique no personagem para acertar", 220, 400, 20, DARKGRAY);
+
+        EndDrawing();
+    }
+
+    UnloadTexture(inimigo);
+    UnloadSound(tiro);
+    UnloadSound(acerto);
+    UnloadMusicStream(musica);
+
+    CloseAudioDevice();
+    CloseWindow();
+
+    return 0;
+}

@@ -1,0 +1,30 @@
+#include "raylib.h"
+
+int main() {
+    // 1. Inicialização
+    int larguraTela = 800;
+    int alturaTela = 450;
+    InitWindow(larguraTela, alturaTela, "Exercício 3 - Quadrado Animado");
+
+    // Sua variável de posição inicial
+    float posX = 0; 
+
+    SetTargetFPS(60);
+
+    // 2. Loop Principal
+    while (!WindowShouldClose()) {
+        posX += 2
+
+    
+        if (posX > larguraTela) {
+            posX = 0; 
+        }
+        BeginDrawing();
+            ClearBackground(RAYWHITE);
+            DrawRectangle(posX, alturaTela/2 - 25, 50, 50, RED);
+        EndDrawing();
+    }
+
+    CloseWindow();
+    return 0;
+}
