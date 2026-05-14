@@ -1,0 +1,32 @@
+#include "raylib.h"
+
+int main()
+{
+    Texture2D inimigo;
+    Texture2D luvaboxe;
+
+    InitWindow(800, 450, "feliz");
+
+    inimigo = LoadTexture("inimigo.png");
+    luvaboxe = LoadTexture("luvaboxe.png");
+
+    while (!WindowShouldClose())
+    {
+        BeginDrawing();
+
+        ClearBackground(RAYWHITE);
+
+       
+        DrawTexture(luvaboxe, 300, 120, WHITE);
+       DrawTexture(inimigo, 50, 150, WHITE);
+
+        EndDrawing();
+    }
+
+    UnloadTexture(inimigo);
+    UnloadTexture(luvaboxe);
+
+    CloseWindow();
+
+    return 0;
+}
