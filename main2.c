@@ -10,9 +10,10 @@ int main()
 
         ClearBackground(RAYWHITE);
 
-        DrawText("Bem-vindo ao Raylib", 50, 10, 40, BLUE);
-        DrawText("Pressione ESC para sair", 60, 60, 20, BLACK);
-        
+        DrawRectangle (100, 100, 100, 100, RED);
+        DrawRectangle(200, 200, 200,100, BLUE);
+        DrawRectangle (400, 300, 100, 100, YELLOW);
+
 
         EndDrawing();
     }
