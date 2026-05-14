@@ -1,0 +1,33 @@
+#include "raylib.h"
+
+int main()
+{
+float posx = 0;
+    Texture2D inimigo;
+
+    InitWindow(800, 450, "feliz");
+
+    inimigo = LoadTexture("inimigo.png");
+
+    while (!WindowShouldClose())
+    {
+        posx = GetFrameTime() * 300;
+        if(posx > 800){
+        posx = 0;        
+}
+        BeginDrawing();
+
+        ClearBackground(RAYWHITE);
+
+       
+       DrawTexture(inimigo, posx, 150, WHITE);
+
+        EndDrawing();
+    }
+
+    UnloadTexture(inimigo);
+
+    CloseWindow();
+
+    return 0;
+}
