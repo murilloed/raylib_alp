@@ -2,7 +2,7 @@
 
 int main()
 {
-    InitWindow(800, 600, "Meu Primeiro Game");
+    InitWindow(800, 600, "Construindo Formas");
 
     while (!WindowShouldClose())
     {
