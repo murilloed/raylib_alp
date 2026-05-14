@@ -17,7 +17,7 @@ int main()
         ClearBackground(RAYWHITE);
 
        
-        DrawTexture(luvaboxe, 300, 120, WHITE);
+        DrawTexture(luvaboxe, 300, 120, RED);
        DrawTexture(inimigo, 50, 150, WHITE);
 
         EndDrawing();
