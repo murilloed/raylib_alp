@@ -2,18 +2,23 @@
 
 int main()
 {
+    int posX = 0;
+    
     InitWindow(800, 600, "Meu Primeiro Game");
 
     while (!WindowShouldClose())
     {
+        posX++;
         BeginDrawing();
 
         ClearBackground(RAYWHITE);
 
-        DrawRectangle(100, 100, 100, 100, RED);
-        DrawRectangle(300, 100, 200, 50, GREEN);
-        DrawRectangle(600, 100, 100, 100, YELLOW);
-
+        DrawRectangle(posX, 100, 100, 100, RED);
+        
+        if (posX > 800){
+            posX = 0;
+        }
+        
         EndDrawing();
     }
 
