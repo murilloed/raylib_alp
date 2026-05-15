@@ -26,9 +26,7 @@
   }
    
   UnloadTexture(mario);
-  UnloadTexture(koopa);
-  UnloadTexture(casco);
-   
+  UnloadTexture(luigi);
   CloseWindow();
   
   return 0;
@@ -112,4 +110,3 @@
   CloseWindow();
   
   return 0;
-
