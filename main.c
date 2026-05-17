@@ -1,8 +1,12 @@
-#include "raylib.h"
+﻿#include "raylib.h"
 
-int main()
+int main(void)
 {
-    InitWindow(800, 600, "Meu Jogo");
+    const int screenWidth = 800;
+    const int screenHeight = 600;
+
+    InitWindow(screenWidth, screenHeight, "Meu Primeiro Game");
+    SetTargetFPS(60);
 
     while (!WindowShouldClose())
     {
@@ -10,7 +14,8 @@ int main()
 
         ClearBackground(RAYWHITE);
 
-        DrawText("Hello World", 10, 10, 20, BLACK);
+        DrawText("Bem-vindo ao raylib", 20, 20, 40, BLUE);
+        DrawText("Meu nome é Mateus", 20, 100, 40, DARKBLUE);
 
         EndDrawing();
     }
